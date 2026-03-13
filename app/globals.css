@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  .bg-dot-pattern {
+    background-image: radial-gradient(#CBD5E1 2px, transparent 2px);
+    background-size: 24px 24px;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+  }
+  .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+}
+
+/* Base Blog Content Styles (Keep existing but polish) */
+.blog-content {
+    padding: 36px 0;
+    @apply font-body text-lg leading-relaxed text-foreground/90;
+}
+.blog-content p {
+    margin-bottom: 24px;
+}
+.blog-content b, .blog-content strong {
+    font-weight: 700;
+    @apply text-foreground;
+}
+.blog-content h1 {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    @apply font-heading text-4xl font-extrabold text-foreground;
+}
+.blog-content h2 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    @apply font-heading text-3xl font-bold text-foreground;
+}
+.blog-content h3 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    @apply font-heading text-xl font-bold text-foreground;
+}
+
