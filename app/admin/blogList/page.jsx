@@ -75,7 +75,7 @@ const Page = () => {
                 {blogs.length === 0 && (
                   <tr>
                     <td colSpan="4" className="px-6 py-20 text-center text-mutedForeground font-bold">
-                      No blogs found. Go to "Add Blog" to create your first post!
+                      No blogs found. Go to &quot;Add Blog&quot; to create your first post!
                     </td>
                   </tr>
                 )}

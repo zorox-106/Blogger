@@ -8,24 +8,23 @@ import React, { useEffect, useState } from 'react'
 import { Button } from '@/Components/ui/Button';
 import { ArrowRight } from 'lucide-react';
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
 
   const [data, setData] = useState(null);
 
-  const fetchBlogData = async () => {
-    try {
-      const response = await axios.get('/api/blog', {
-        params: { id: params.id }
-      })
-      setData(response.data);
-    } catch (error) {
-      console.error("Error fetching blog data:", error);
-    }
-  }
-
   useEffect(() => {
+    const fetchBlogData = async () => {
+      try {
+        const response = await axios.get('/api/blog', {
+          params: { id: params.id }
+        })
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching blog data:", error);
+      }
+    }
     fetchBlogData();
-  }, [])
+  }, [params.id])
 
   return (data ? <>
     <div className='relative bg-tertiary py-5 px-5 md:px-12 lg:px-28 border-b-2 border-border overflow-hidden'>
@@ -88,4 +87,4 @@ const page = ({ params }) => {
   )
 }
 
-export default page
+export default Page

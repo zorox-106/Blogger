@@ -64,7 +64,7 @@ const Header = () => {
           The freshest <span className="text-accent underline decoration-4 decoration-wavy underline-offset-8">thoughts</span> on the internet.
         </h1>
         <p className='mt-8 max-w-[600px] mx-auto text-lg sm:text-xl text-foreground/80 font-medium'>
-          Explore ideas that pop. A playground for tech, startup stories, and lifestyle musings. Subscribe so you don't miss a beat.
+          Explore ideas that pop. A playground for tech, startup stories, and lifestyle musings. Subscribe so you don&apos;t miss a beat.
         </p>
 
         {/* Subscribe Form */}
